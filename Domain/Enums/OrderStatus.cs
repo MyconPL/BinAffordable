@@ -6,5 +6,6 @@ public enum OrderStatus
     Assigned,
     InProgress,
     Delivered,
+    ReadyForPickup,
     Cancelled
 }
