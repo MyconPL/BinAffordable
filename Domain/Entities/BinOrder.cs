@@ -10,7 +10,8 @@ public class BinOrder
     public string CustomerLastName { get; set; }
     public string PhoneNumber { get; set; }
     public string Address { get; set; }
-    public DateTime ScheduleDate { get; set; }
+    public DateTime DeliveryDate { get; set; }
+    public DateTime PickupDate { get; set; }
     public OrderStatus Status { get; private set; }
     public ContainerSize ContainerSize { get; set; }
     public WasteCategory WasteCategory { get; set; }
@@ -21,18 +22,23 @@ public class BinOrder
         string lastName,
         string phoneNumber,
         string address,
-        DateTime scheduleDate,
-        OrderStatus status,
+        DateTime pickupDate,
+        DateTime deliveryDate,
+        DateTime status,
         ContainerSize containerSize,
         WasteCategory wasteCategory,
-        string notes)
+        string? notes = null)
     {
         Id = Guid.NewGuid();
         CustomerFirstName = firstName;
         CustomerLastName = lastName;
         PhoneNumber = phoneNumber;
         Address = address;
-        ScheduleDate = scheduleDate;
+        DeliveryDate = deliveryDate;
+        PickupDate = pickupDate;
+        WasteCategory = wasteCategory;
+        ContainerSize = containerSize;
+        Notes = notes;
         Status = OrderStatus.Pending;
     }
 }

@@ -10,6 +10,9 @@ public enum ContainerSize
     [Display(Name = "10")]
     Size10 = 10,
 
+    [Display(Name = "12")]
+    Size12 = 12,
+    
     [Display(Name = "14")]
     Size14 = 14,
 

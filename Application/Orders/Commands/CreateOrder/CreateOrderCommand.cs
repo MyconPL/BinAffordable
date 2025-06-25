@@ -8,7 +8,8 @@ public record CreateOrderCommand(
     string CustomerLastName,
     string PhoneNumber,
     string Address,
-    DateTime ScheduleDate,
+    DateTime DeliveryDate,
+    DateTime PickupDate,
     ContainerSize ContainerSize,
     WasteCategory WasteCategory,
     string? Notes
