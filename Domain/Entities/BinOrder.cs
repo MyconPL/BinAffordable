@@ -14,6 +14,7 @@ public class BinOrder
     public DateTime PickupDate { get; set; }
     public OrderStatus Status { get; private set; }
     public ContainerSize ContainerSize { get; set; }
+    public BinNumber BinNumber { get; set; }
     public WasteCategory WasteCategory { get; set; }
     public String? Notes { get; set; }
 
@@ -26,6 +27,7 @@ public class BinOrder
         DateTime deliveryDate,
         DateTime status,
         ContainerSize containerSize,
+        BinNumber binNumber,
         WasteCategory wasteCategory,
         string? notes = null)
     {
@@ -37,6 +39,7 @@ public class BinOrder
         DeliveryDate = deliveryDate;
         PickupDate = pickupDate;
         WasteCategory = wasteCategory;
+        BinNumber = binNumber;
         ContainerSize = containerSize;
         Notes = notes;
         Status = OrderStatus.Pending;

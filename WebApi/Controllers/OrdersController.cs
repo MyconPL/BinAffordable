@@ -1,4 +1,5 @@
 ﻿using Application.Orders.Commands.CreateOrder;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Infrastructure.Controllers;
 
@@ -22,7 +23,7 @@ public class OrdersController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public Task<IActionResult> GetById(Guid id)
+    public async Task<IActionResult> GetById(Guid id)
     {
         return Ok();
     }
